@@ -1,14 +1,16 @@
 package com.example.Membre.Service;
 
+import com.example.Membre.Bean.PublicationBean;
 import com.example.Membre.DAO.EnseignantChercheurRepository;
 import com.example.Membre.DAO.EtudiantRepository;
 import com.example.Membre.DAO.MemberRepository;
-import com.example.Membre.Entities.EnseignantChercheur;
-import com.example.Membre.Entities.Etudiant;
-import com.example.Membre.Entities.Membre;
+import com.example.Membre.DAO.MembrePubRepository;
+import com.example.Membre.Entities.*;
+import com.example.Membre.Proxies.PublicationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -19,6 +21,10 @@ public class IMemberImpl implements MemberService {
     EtudiantRepository etudiantRepository;
     @Autowired
     EnseignantChercheurRepository enseignantChercheurRepository;
+    @Autowired
+    MembrePubRepository membrepubrepository;
+    @Autowired
+    PublicationService proxy;
 
     public Membre addMember(Membre m) {
         memberRepository.save(m);
@@ -75,4 +81,22 @@ public class IMemberImpl implements MemberService {
     public List<Etudiant>findEtudiantByEncadrant(EnseignantChercheur enseignantChercheur){
         return etudiantRepository.findEtudiantsByEncadrant(enseignantChercheur);
     }
+    public void affecterauteurTopublication(Long idauteur, Long idpub) {
+        Membre mbr= memberRepository.findById(idauteur).get();
+        Membre_Publication mbs= new Membre_Publication();
+        mbs.setAuteur(mbr);
+        mbs.setId(new Membre_Pub_Id(idpub, idauteur));
+        membrepubrepository.save(mbs);
+    }
+    public List<PublicationBean> findPublicationparauteur(Long idauteur) {List<PublicationBean> pubs=new ArrayList<>();
+        Membre auteur= memberRepository.findById(idauteur).get();
+        List< Membre_Publication>
+                idpubs=membrepubrepository.findByAuteur(auteur);
+        idpubs.forEach(s->{
+            System.out.println(s);
+            pubs.add(proxy.findPublicationById(s.getId().getPublication_id()));}
+        );
+        return pubs;
+    }
+
 }

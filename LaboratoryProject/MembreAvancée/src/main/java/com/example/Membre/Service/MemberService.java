@@ -1,5 +1,6 @@
 package com.example.Membre.Service;
 
+import com.example.Membre.Bean.PublicationBean;
 import com.example.Membre.Entities.EnseignantChercheur;
 import com.example.Membre.Entities.Etudiant;
 import com.example.Membre.Entities.Membre;
@@ -32,4 +33,9 @@ public interface MemberService {
     public void  affecterEtudiantEnseignant(long id_etd,long id_ens);
 
     public List<Etudiant>findEtudiantByEncadrant(EnseignantChercheur enseignantChercheur);
+
+    public void affecterauteurTopublication(Long idauteur, Long idpub);
+
+    public List<PublicationBean>
+    findPublicationparauteur (Long idauteur);
 }

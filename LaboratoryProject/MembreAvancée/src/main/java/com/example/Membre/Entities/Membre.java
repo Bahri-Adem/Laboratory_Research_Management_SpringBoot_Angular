@@ -1,10 +1,12 @@
 package com.example.Membre.Entities;
 
+import com.example.Membre.Bean.PublicationBean;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.io.Serializable;
+import java.util.Collection;
 import java.util.Date;
 
 
@@ -40,5 +42,7 @@ public abstract class Membre implements Serializable {
     private String email;
     @NonNull
     private String password;
+    @Transient
+    Collection<PublicationBean> pubs;
 
 }

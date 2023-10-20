@@ -61,4 +61,10 @@ public class MemberRestController {
     public void affecterEtudiantEnseignant(@PathVariable Long id_etd, @PathVariable Long id_ens) {
         memberService.affecterEtudiantEnseignant(id_etd, id_ens);
     }
+    @GetMapping("/fullmember/{id}")
+    public Membre findAFullMember(@PathVariable(name="id") Long id){
+        Membre mbr=memberService.findMember(id);
+        mbr.setPubs(memberService.findPublicationparauteur(id));
+        return mbr;
+    }
 }
