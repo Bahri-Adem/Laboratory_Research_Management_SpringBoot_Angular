@@ -67,10 +67,7 @@ export class ChangePasswordComponent implements OnInit {
           this.responseMessage = error.error?.message;
         } else {
           this.responseMessage = GlobalConstants.oldPasswordError;
-          this.snackbarService.openSnackBar(
-            this.responseMessage,
-            GlobalConstants.error
-          );
+          this.snackbarService.openSnackBar(this.responseMessage, 'error');
         }
       }
     );

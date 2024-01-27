@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : sam. 02 déc. 2023 à 13:21
+-- Généré le : sam. 27 jan. 2024 à 16:18
 -- Version du serveur : 10.4.24-MariaDB
 -- Version de PHP : 7.4.29
 
@@ -75,20 +75,21 @@ CREATE TABLE `membre` (
 --
 
 INSERT INTO `membre` (`type_mbr`, `id`, `cin`, `cv`, `date`, `email`, `nom`, `password`, `photo`, `prenom`, `etablissement`, `grade`, `date_inscription`, `diplome`, `sujet`, `encadrant_id`, `role`) VALUES
-('ens', 1, '14019376', 'cv2', '2019-10-29', 'jmaiel@enis.tn', 'Jmaiel', '123', NULL, 'Mohamed', 'ENIS', 'Higher education professor', NULL, NULL, NULL, NULL, 'ens'),
-('ens', 2, '14019376', 'cv1', '2010-09-07', 'aziz@enis.tn', 'Bejaoui', '123', NULL, 'Aziz', 'FSS', 'Lecturer', NULL, NULL, NULL, NULL, 'ens'),
-('etd', 3, '14019376', 'cv2', '2001-01-25', 'adem@enis.tn', 'Bahri', '12345', NULL, 'Adem', NULL, NULL, '2021-08-31', 'GI', 'Microservices', 1, 'etd'),
-('etd', 4, '14019376', 'cv1', '2001-01-25', 'firas@enis.tn', 'Chakroun', '50091931', NULL, 'Firas', NULL, NULL, '2021-08-31', 'GI', ' Mlops,Data', 10, 'etd'),
-('etd', 7, '14019376', 'cv1', '2001-01-25', 'aabdou@enis.tn', 'Abdou', '50091931', NULL, 'Amal', NULL, NULL, '2021-09-01', 'GI', 'BlockChain', 2, 'etd'),
-('etd', 8, '14019376', 'cv1', '2001-01-25', 'aabdou@enis.tn', 'ryma', '50091931', NULL, '9atata', NULL, NULL, '2021-09-01', 'GI', 'BlockChain', 1, 'etd'),
-('ens', 9, '14019376', 'cv2', '2019-10-15', 'assil@enis.tn', 'Bouaziz', '123', NULL, 'Assil', 'ENETCOM', 'Assistant professor', NULL, NULL, NULL, NULL, 'ens'),
-('ens', 10, '14091964', 'cv2', '2019-10-11', 'Imane@enis.tn', 'Lahyeni', '123', NULL, 'Imane', 'ENIS', 'Assistant professor', NULL, NULL, NULL, NULL, 'ens'),
-('ens', 11, '15486324', 'cv2', '2002-03-01', 'zied@fss.tn', 'GORMAZI', '123', NULL, 'ZIED', 'FSS', 'Assistant', NULL, NULL, NULL, NULL, 'ens'),
-('ens', 13, '14019346', 'cv1', '2023-11-30', 'bahruy.adem@gmail.com', 'Bahri', '12345', NULL, 'Adem', 'ENETCOM', 'Lecturer', NULL, NULL, NULL, NULL, 'ens'),
-('etd', 14, '14019376', 'cv2', '2001-01-25', 'adem@gmail.com', 'Bahryyy', '50091931', NULL, 'Adem', NULL, NULL, '2021-08-31', 'GI', 'Microservices', 2, 'etd'),
-('etd', 15, '14019376', 'cv2', '2001-01-25', 'adem@gmail.tn', 'Bahry', '50091931', NULL, 'Adem', NULL, NULL, '2021-08-31', 'GI', 'Microservices', NULL, 'etd'),
-('etd', 16, '12345678', 'cv2', '2023-11-16', 'aa@aa.aa', 'aa', '12345', NULL, 'aa', NULL, NULL, '2023-11-06', 'GEM', 'aze', 11, 'etd'),
-('adm', 17, '14019645', NULL, '2000-01-25', 'admin@admin.com', 'admin', '123', NULL, 'admin', NULL, NULL, NULL, NULL, NULL, NULL, 'admin');
+('ens', 1, '14019376', 'cv2', '2019-10-29', 'Mohamed.Jmaiel@enetcom.tn', 'Jmaiel', '123', NULL, 'Mohamed', 'ENETCOM', 'Higher education professor', NULL, NULL, NULL, NULL, 'ens'),
+('ens', 2, '14019376', 'cv1', '2010-09-07', 'Riadh.ben.halima@fss.tn', 'Ben Halima', '123', NULL, 'Riadh', 'FSS', 'Lecturer', NULL, NULL, NULL, NULL, 'ens'),
+('etd', 3, '14019376', 'cv2', '2001-01-25', 'adem.bahri@enis.tn', 'Bahri', '123', NULL, 'Adem', NULL, NULL, '2021-08-31', 'GI', 'Microservices', 13, 'etd'),
+('etd', 4, '14019376', 'cv1', '2001-01-25', 'firas.chakroun@enis.tn', 'Chakroun', '123', NULL, 'Firas', NULL, NULL, '2021-08-31', 'GI', 'Mlops,Data', 2, 'etd'),
+('etd', 7, '14019376', 'cv1', '2001-01-25', 'assil.bouaziz@enis.tn', 'Bouaziz', '123', NULL, 'Assil', NULL, NULL, '2021-09-01', 'GB', 'BlockChain', 11, 'etd'),
+('etd', 8, '14019376', 'cv1', '2001-01-25', 'aziz.bejaoui@enis.tn', 'Bejaoui', '123', NULL, 'Aziz', NULL, NULL, '2021-09-01', 'GEM', 'BlockChain', 9, 'etd'),
+('ens', 9, '14019376', 'cv2', '1925-11-11', 'Slim.kanoun@enis.tn', 'Kanoun', '123', NULL, 'Slim', 'ENIS', 'Assistant', NULL, NULL, NULL, NULL, 'ens'),
+('ens', 10, '14091964', 'cv2', '2019-10-11', 'Imene.Lahyeni@enis.tn', 'Lahyeni', '123', NULL, 'Imene', 'ENIS', 'Assistant professor', NULL, NULL, NULL, NULL, 'ens'),
+('ens', 11, '15486324', 'cv2', '2002-03-01', 'wael.ouarda@fss.tn', 'Ouarda', '123', NULL, 'Wael', 'FSS', 'Assistant', NULL, NULL, NULL, NULL, 'ens'),
+('ens', 13, '14019346', 'cv1', '2023-11-30', 'Sihem.Loukil@enis.tn', 'Loukil', '123', NULL, 'Sihem', 'ENIS', 'Assistant professor', NULL, NULL, NULL, NULL, 'ens'),
+('etd', 14, '14019376', 'cv2', '2001-01-25', 'Ibrahim.ben.lakhel@enis.tn', 'Ben Lakhel', '123', NULL, 'Ibrahim', NULL, NULL, '2021-08-31', 'GI', 'Microservices', 1, 'etd'),
+('etd', 15, '14019376', 'cv2', '2001-01-25', 'adem@gmail.tn', 'Bahry', '123', NULL, 'Adem', NULL, NULL, '2021-08-31', 'GI', 'Microservices', 10, 'etd'),
+('adm', 17, '14019645', NULL, '2000-01-25', 'admin@admin.com', 'admin', '1234', NULL, 'admin', NULL, NULL, NULL, NULL, NULL, NULL, 'admin'),
+('ens', 25, '14019355', 'CV2', '1980-03-10', 'mariem.lahami@enis.tn', 'Lahami', '123', NULL, 'Mariem', 'ENIS', 'Higher education professor', NULL, NULL, NULL, NULL, 'ens'),
+('etd', 27, '12345678', 'cv1', '2024-01-09', 'aa@aa.aa', 'aa', '123', NULL, 'aa', NULL, NULL, '2024-01-16', 'GE', 'IA', 11, 'etd');
 
 -- --------------------------------------------------------
 
@@ -106,19 +107,19 @@ CREATE TABLE `membre_publication` (
 --
 
 INSERT INTO `membre_publication` (`publication_id`, `auteur_id`) VALUES
-(1, 1),
 (2, 1),
 (3, 1),
 (3, 2),
 (4, 2),
-(5, 2),
-(1, 4),
-(4, 4),
-(1, 7),
+(5, 9),
 (1, 10),
 (2, 10),
 (4, 10),
-(4, 11);
+(4, 11),
+(5, 11),
+(3, 13),
+(18, 13),
+(1, 25);
 
 -- --------------------------------------------------------
 
@@ -171,7 +172,9 @@ INSERT INTO `publication` (`id`, `date`, `lien`, `sourcepdf`, `titre`, `type`) V
 (7, '2021-01-25', 'ff', 'source1', 'Cyber Security15', 'Journal'),
 (8, '2023-11-13', NULL, NULL, 'aa', 'aa'),
 (9, '2023-11-13', 'bb', 'kjkj', 'bb', 'bb'),
-(10, '2023-11-13', 'aa', 'ff', 'dd', 'dd');
+(10, '2023-11-13', 'aa', 'ff', 'dd', 'dd'),
+(16, '2024-01-01', 'aa', 'source3', 'UML', 'Poster'),
+(18, '2024-01-02', 'aa.com', 'aa', 'aaaa', 'aaa');
 
 --
 -- Index pour les tables déchargées
@@ -222,19 +225,19 @@ ALTER TABLE `evenement`
 -- AUTO_INCREMENT pour la table `membre`
 --
 ALTER TABLE `membre`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT pour la table `outil`
 --
 ALTER TABLE `outil`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT pour la table `publication`
 --
 ALTER TABLE `publication`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- Contraintes pour les tables déchargées
